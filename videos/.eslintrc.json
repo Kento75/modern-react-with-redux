@@ -1,0 +1,29 @@
+{
+  "eslint.autoFixOnSave": true,
+  "extends": [
+    "standard",
+    "plugin:prettier/recommended",
+    "parser:babel-eslint"
+  ],
+  "plugins": [
+    "react",
+    "prettier"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {},
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "globals": {
+    "it": false
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "react/jsx-uses-react": 1,
+    "react/jsx-uses-vars": 1,
+    "no-console": "warn",
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/anchor-is-valid": "off"
+  }
+}
