@@ -28,10 +28,9 @@ class SongList extends React.Component {
 }
 
 const mapStateToProps = state => {
-  console.log (state);
   return {songs: state.songs};
 };
 
 export default connect (mapStateToProps, {
-  selectSong: selectSong,
+  selectSong,
 }) (SongList);
