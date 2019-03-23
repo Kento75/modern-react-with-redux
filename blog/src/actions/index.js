@@ -6,10 +6,11 @@ export const fetchPostsAndUsers = () => async (dispatch, getState) => {
   // ポスト一覧取得
   await dispatch(fetchPosts())
 
-  // ユーザーID重複排除
-  const userIds = _.uniq(_.map(getState().posts, "userId"))
-  // ユーザー名の取得
-  userIds.forEach(id => dispatch(fetchUser(id)))
+  _.chain(getState().posts)
+    .map("userId")
+    .uniq()
+    .forEach(id => dispatch(fetchUser(id)))
+    .value()
 }
 
 export const fetchPosts = () => async dispatch => {
