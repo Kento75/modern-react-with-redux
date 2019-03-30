@@ -9,6 +9,8 @@ import {
   EDIT_STREAM
 } from "./types";
 
+import history from "../history";
+
 export const signIn = (userId) => {
   return {
     type: SIGN_IN,
@@ -22,7 +24,7 @@ export const signOut = () => {
   }
 }
 
-export const createStream = formValues => async (dispatch, getState) => {
+export const createStream = (formValues) => async (dispatch, getState) => {
   const {
     userId
   } = getState().auth
@@ -34,6 +36,8 @@ export const createStream = formValues => async (dispatch, getState) => {
     type: CREATE_STREAM,
     payload: response.data
   })
+
+  history.push("/")
 }
 
 export const fetchStreams = () => async dispatch => {
