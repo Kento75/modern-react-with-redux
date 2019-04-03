@@ -1,0 +1,15 @@
+{
+  "name": "rtmpserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "kento75 <kento2github@gmail.com> (https://overreact.tk)",
+  "license": "ISC",
+  "dependencies": {
+    "node-media-server": "^2.0.1"
+  }
+}
